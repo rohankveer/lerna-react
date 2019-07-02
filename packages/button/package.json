@@ -1,0 +1,29 @@
+{
+  "name": "@daas/button",
+  "version": "1.0.1",
+  "description": "react with lerna",
+  "author": "rohankveer <rohanveer1989@gmail.com>",
+  "homepage": "https://github.com/rohankveer/lerna-react#readme",
+  "license": "ISC",
+  "main": "lib/button.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohankveer/lerna-react.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/rohankveer/lerna-react/issues"
+  }
+}
