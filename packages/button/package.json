@@ -5,10 +5,24 @@
   "author": "rohankveer <rohanveer1989@gmail.com>",
   "homepage": "https://github.com/rohankveer/lerna-react#readme",
   "license": "ISC",
-  "main": "lib/button.js",
+  "main": "dist/button.js",
+  "module": "lib/button.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
   },
   "files": [
     "lib"
@@ -21,7 +35,9 @@
     "url": "git+https://github.com/rohankveer/lerna-react.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "webpack --env.prod --config webpack.js",
+    "transpile": "babel src -d dist --ignore '**/*.spec.js,**/*.stories.js'"
   },
   "bugs": {
     "url": "https://github.com/rohankveer/lerna-react/issues"
