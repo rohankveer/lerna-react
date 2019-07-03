@@ -13,7 +13,3 @@ storiesOf('Button', module)
   .add('with some emoji', () => (
       <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
   ))
-
-  .add('with a theme provider', () => (
-    <Button onClick={action('clicked')}>Button</Button>
-  ))
